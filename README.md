@@ -7,13 +7,14 @@ One thing a day for your long project. Sow it in the morning, wrap up at night, 
 Paste the whole block below into your AI agent — Claude Code, Codex, Gemini CLI, or the Code tab of the Claude app. It does the rest; you only approve its prompts.
 
     Install Moonseed for me and connect it to you.
-    1. Make sure node 22 or newer is available. If not, download the official macOS build
-       from nodejs.org into ~/Library/Application Support/Moonseed/node/ (no sudo; leave any
-       node I already have alone).
+    1. Make sure node 22 or newer is available. If not, download the official macOS build for this CPU
+       from nodejs.org and unpack it so that ~/Library/Application Support/Moonseed/node/bin/node exists
+       (no sudo; leave any node I already have alone).
     2. Download https://github.com/1466094598lilye-byte/Moonseed-releases/releases/latest/download/Moonseed.zip
-       with curl, unzip it, put Moonseed.app in /Applications, open it once.
-    3. Read ~/Library/Application Support/Moonseed/last-boot.json: "mcp.shim" is the command,
-       "dataDir" is its only argument.
+       with curl, unpack it with `ditto -x -k`, put Moonseed.app in /Applications (replace an older copy),
+       and open it once.
+    3. Wait for ~/Library/Application Support/Moonseed/last-boot.json to appear, then read it:
+       "mcp.shim" is the command, "dataDir" is its only argument.
     4. Register that as a stdio MCP server named exactly "moonseed", for me as a user
        (not just this project), using your own configuration mechanism.
     5. Tell me whether I need to restart you.
